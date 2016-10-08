@@ -26,6 +26,8 @@ public class LoginAction extends ActionSupport {
 	//登录
 	public String login() {
 		if (admin != null) {
+			System.out.println(admin.getUserName());
+			System.out.println(admin.getPassword());
 			if (StringUtils.isNotBlank(admin.getUserName()) && StringUtils.isNotBlank(admin.getPassword())) {
 				//根据用户的帐号和密码查询用户列表
 				if (admin.getUserName().equals("admin") && admin.getPassword().equals("admin")) {
