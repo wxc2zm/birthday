@@ -35,7 +35,7 @@ public class LoginAction extends ActionSupport {
 					Log log = LogFactory.getLog(getClass());
 					log.info(admin.getUserName() + new Date() + "登陆系统");
 					//2.1.4、重定向跳转到首页
-					return "listUI";
+					return "home";
 				} else {
 					loginResult = "账号或密码错误";
 				}

@@ -37,10 +37,4 @@
 	<include file="com/money/xfgl/user/conf/user-struts.xml"></include>
 	<!-- 包含用户登陆的struts配置文件 -->
 	<include file="com/money/login/conf/login-struts.xml"></include>
-	<!-- 包含系统首页的struts配置文件 -->
-	<include file="com/money/home/conf/home-struts.xml"></include>
-	<!-- 包含纳税服务系统首页的struts配置文件 -->
-	<include file="com/money/xfgl/home/conf/home-struts.xml"></include>
-	<!-- 包含登录的struts配置文件 -->
-	<include file="com/money/login/conf/login-struts.xml"></include>
 </struts>

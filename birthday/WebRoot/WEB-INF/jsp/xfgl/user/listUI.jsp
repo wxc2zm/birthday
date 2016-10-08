@@ -41,6 +41,11 @@
       		document.forms[0].action = "${basePath}nsfw/user_importExcel.action";
       		document.forms[0].submit();
       	}
+      	//退出
+      	function doLogOut(){
+      		document.forms[0].action = "${basePath}sys/login_logout.action";
+      		document.forms[0].submit();
+      	}
       	var list_url = "${basePath}nsfw/user_listUI.action";
     	//搜索
       	function doSearch(){
@@ -68,7 +73,7 @@
                         <input type="button" value="导出" class="s_button" onclick="doExportExcel()"/>&nbsp;
                     	<input name="userExcel" type="file"/>
                         <input type="button" value="导入" class="s_button" onclick="doImportExcel()"/>&nbsp;
-
+						<input type="button" value="退出" class="s_button" onclick="doLogOut()"/>&nbsp;
                     </li>
                 </div>
 

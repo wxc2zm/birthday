@@ -6,9 +6,8 @@
 <struts>
 	<package name="login-action" namespace="/sys" extends="base-default">
 		<action name="login_*" class="com.money.login.action.LoginAction" method="{1}">
-			<result name="{1}">/WEB-INF/jsp/xfgl/user/{1}.jsp</result>
+			<result name="home">/WEB-INF/jsp/xfgl/home/home.jsp</result>
 			<result name="loginUI">/WEB-INF/jsp/loginUI.jsp</result>
 		</action>
 	</package>
-
 </struts>
