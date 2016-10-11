@@ -20,6 +20,7 @@ public class AppInterfaceServiceImpl implements AppInterfaceService {
 
 	@Override
 	public String save(User user) {
+		
 		userService.save(user);
 		Tool.updateUser(userService.findObjects());
 		return "result:003";
@@ -28,6 +29,7 @@ public class AppInterfaceServiceImpl implements AppInterfaceService {
 	
 	@Override
 	public String update(User user) {
+		System.out.println("更新：" + user);
 		userService.update(user);
 		Tool.updateUser(userService.findObjects());
 		return "result:001";
@@ -53,9 +55,9 @@ public class AppInterfaceServiceImpl implements AppInterfaceService {
 	}
 
 	@Override
-	public String compareFileTime(long clientTime) {
-		long serverTime = new File("D:\\apache-tomcat-7.0.70\\webapps\\birthday\\xml\\user.xml").lastModified();
-		if (clientTime == serverTime) {
+	public String compareFile(long clientFile) {
+		long serverFile = new File("D:\\apache-tomcat-7.0.70\\webapps\\birthday\\xml\\user.xml").length();
+		if (clientFile == serverFile) {
 			return "result:0001";
 		} else {
 			return "result:0002";

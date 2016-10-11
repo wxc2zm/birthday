@@ -19,7 +19,7 @@ public interface AppInterfaceService {
 	//登陆验证
 	public String guestLogin(String username, String password);
 	
-	//验证客户端与服务端文件创建时间的大小
-	public String compareFileTime(long clientTime);
+	//验证客户端与服务端文件的大小
+	public String compareFile(long clientFile);
 
 }
